@@ -11,7 +11,7 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.title    = 'BootstrapToolbelt'
   rdoc.options << '--line-numbers'
   rdoc.rdoc_files.include('README.rdoc')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+  rdoc.rdoc_files.include(['lib/**/*.rb', 'app/**/*.rb'])
 end
 
 APP_RAKEFILE = File.expand_path("../test/dummy/Rakefile", __FILE__)

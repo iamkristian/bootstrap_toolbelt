@@ -1,0 +1,8 @@
+da:
+  flash:
+    warning: Advarsel
+    danger: Fejl
+    success: Success
+    create: "%{model} blev oprettet."
+    update: "%{model} blev opdateret."
+    destroy: "%{model} blev slettet."

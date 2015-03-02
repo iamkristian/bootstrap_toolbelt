@@ -1,0 +1,8 @@
+en:
+  flash:
+    warning: Warning
+    danger: Error
+    success: Success
+    create: "%{model} was created."
+    update: "%{model} was updated."
+    destroy: "%{model} was deleted."

@@ -5,6 +5,7 @@ module FlashHelper
         render partial: 'shared/flash', locals: { message: msg, type: flash_type_to_class(name) }
       end
     end
+    flash.clear
     markup.join.html_safe
   end
 

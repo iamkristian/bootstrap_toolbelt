@@ -4,6 +4,7 @@ module NavigationHelper
 
     content_tag(:li, class: class_name) do
       link_to text, link_path, options
+      yield if block_given?
     end
   end
 end

@@ -10,9 +10,15 @@ module NavigationHelper
     end
   end
 
+  def active_if_current_page(path, class_name = 'active')
+    current_page?(path) ? class_name : ""
+  end
+
   private
 
   def link_classes(link_path, options)
-    current_page?(link_path) ? options.fetch(:class, "active") : ""
+    classes = options.fetch(:class, "")
+    active_class = active_if_current_page(link_path, options.fetch(:active, "active"))
+    "#{classes} #{active_class}".strip
   end
 end

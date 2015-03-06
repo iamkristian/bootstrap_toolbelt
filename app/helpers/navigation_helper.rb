@@ -1,10 +1,9 @@
 module NavigationHelper
- def nav_link(text, link_path, options = {})
-    class_name = current_page?(link_path) ? options.fetch(:class_name, 'active') : ''
-
-    content_tag(:li, class: class_name) do
-      link_to text, link_path, options
-      yield if block_given?
+  def nav_link(text, link_path, options = {}, &block)
+    active_class_name = current_page?(link_path) ? options.fetch(:active_class_name, 'active') : ''
+    inner = capture(&block)
+    content_tag(:li, class: "#{options.fetch(:class_name)}") do
+      concat(link_to(text, link_path, class: active_class_name)).concat( block_given? ? inner : "" )
     end
   end
 end

@@ -6,7 +6,7 @@ module NavigationHelper
 
     inner = capture(&block)
     content_tag(:li, list_options) do
-      concat(link_to(text, link_path, link_options)).concat( block_given? ? inner : "" )
+      concat(link_to(text.html_safe, link_path, link_options)).concat( block_given? ? inner : "" )
     end
   end
 

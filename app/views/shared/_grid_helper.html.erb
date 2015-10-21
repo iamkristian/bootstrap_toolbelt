@@ -1,0 +1,10 @@
+<div class="row">
+  <% %w(xs sm md lg).each do |s| -%>
+    <div class="col-xs-12 bordered centered visible-<%= s %>-block"><%= s %></div>
+  <% end -%>
+</div>
+<div class="row">
+  <% (1..12).each do |n| -%>
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 bordered centered"><%= n %></div>
+  <% end -%>
+</div>

@@ -1,5 +1,7 @@
 # Bootstrap toolbelt
 
+Upgraded to match Rails 5
+
 ## Icon helper
 
 The ``` bs_icon ``` helper will render a bootstrap glyphicon for you.
